@@ -33,3 +33,4 @@ features:
     link: https://github.com/jieci0825/mini-vue
 ---
 
+<Confetti/>

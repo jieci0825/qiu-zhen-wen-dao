@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Giscus from '@giscus/vue'
+import NotFount from '../components/not-found.vue'
 import DefaultTheme from 'vitepress/theme'
 import { useData, inBrowser } from 'vitepress'
 import { watch } from 'vue'
@@ -12,7 +13,6 @@ const { isDark } = useData()
 watch(isDark, value => {
     // 如果不是浏览器则不做处理
     if (!inBrowser) return
-    console.log('isDark', value)
 
     const iframe = document.querySelector('giscus-widget')?.shadowRoot?.querySelector('iframe')
     if (iframe) {
@@ -40,7 +40,7 @@ watch(isDark, value => {
                     repo-id="R_kgDONqjECA"
                     category="General"
                     category-id="DIC_kwDONqjECM4CmBZR"
-                    mapping="pathname"
+                    mapping="title"
                     strict="0"
                     input-position="top"
                     lang="zh-CN"
@@ -51,6 +51,9 @@ watch(isDark, value => {
                     :theme="isDark ? 'dark' : 'light'"
                 />
             </div>
+        </template>
+        <template #not-found>
+            <NotFount></NotFount>
         </template>
     </Layout>
 </template>

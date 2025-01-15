@@ -1,61 +1,67 @@
 {
-  "hash": "eeb5ea6f",
+  "hash": "eeb34968",
   "configHash": "9d6cf717",
-  "lockfileHash": "9cc61b3b",
-  "browserHash": "7c3671d1",
+  "lockfileHash": "725272bc",
+  "browserHash": "12813e05",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/.pnpm/vue@3.5.13/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "ee6d2694",
+      "fileHash": "f9540132",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/.pnpm/@vue+devtools-api@7.7.0/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "bc504de6",
+      "fileHash": "30eeac30",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/.pnpm/@vueuse+core@11.3.0_vue@3.5.13/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "3cd91b11",
+      "fileHash": "306738a9",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/.pnpm/@vueuse+integrations@11.3.0_focus-trap@7.6.4_vue@3.5.13/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "377cc0ea",
+      "fileHash": "f292bcbd",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "a6562796",
+      "fileHash": "07fcdabc",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../node_modules/.pnpm/minisearch@7.1.1/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "80eba0e6",
+      "fileHash": "c7529b86",
       "needsInterop": false
     },
     "@giscus/vue": {
       "src": "../../../node_modules/.pnpm/@giscus+vue@3.1.1_vue@3.5.13/node_modules/@giscus/vue/dist/index.js",
       "file": "@giscus_vue.js",
-      "fileHash": "3e3dd7f2",
+      "fileHash": "f4fff23b",
+      "needsInterop": false
+    },
+    "canvas-confetti": {
+      "src": "../../../node_modules/.pnpm/canvas-confetti@1.9.3/node_modules/canvas-confetti/dist/confetti.module.mjs",
+      "file": "canvas-confetti.js",
+      "fileHash": "16c79150",
       "needsInterop": false
     }
   },
   "chunks": {
+    "giscus-Ci9LqPcC-CCB7DQEP": {
+      "file": "giscus-Ci9LqPcC-CCB7DQEP.js"
+    },
     "chunk-UVAXUOWU": {
       "file": "chunk-UVAXUOWU.js"
     },
     "chunk-CQOUZRMK": {
       "file": "chunk-CQOUZRMK.js"
-    },
-    "giscus-Ci9LqPcC-CCB7DQEP": {
-      "file": "giscus-Ci9LqPcC-CCB7DQEP.js"
     }
   }
 }
