@@ -1,6 +1,10 @@
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vitepress'
 import { nav } from './nav.mts'
 import { procressSidebar } from './sidebar.mts'
+import { viteDemoPreviewPlugin } from '@vitepress-code-preview/plugin'
+import { fileURLToPath, URL } from 'node:url'
+import { demoPreviewPlugin } from '@vitepress-code-preview/plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -88,6 +92,13 @@ export default defineConfig({
             dangerLabel: '危险',
             infoLabel: '信息',
             detailsLabel: '详情信息'
+        },
+        config(md) {
+            const docRoot = fileURLToPath(new URL('../', import.meta.url))
+            md.use(demoPreviewPlugin, { docRoot })
         }
+    },
+    vite: {
+        plugins: [viteDemoPreviewPlugin(), vueJsx()]
     }
 })
