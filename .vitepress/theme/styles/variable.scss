@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #009688;
+    --primary-color-light: #04c8b1;
+    --primary-color-light-3: #1de4ca;
+    --primary-color-light-5: #51f7dc;
+    --primary-color-light-7: #90ffe9;
+    --primary-color-light-8: #c7fff4;
+    --primary-color-light-9: #effefb;
+    --primary-color-dark: #0a655f;
+    --primary-color-dark-1: #0d544f;
+    --primary-color-dark-2: #003332;
+
+    /* 主题色 */
+    --vp-c-indigo-1: var(--primary-color);
+    /* 主题色-hover */
+    --vp-c-indigo-2: var(--primary-color-light);
+    --vp-c-indigo-3: var(--primary-color);
+
+    /* 标题 */
+    --vp-home-hero-name-color: transparent;
+    /* 标题-渐变色 */
+    --vp-home-hero-name-background: linear-gradient(
+        135deg,
+        var(--primary-color-dark) 10%,
+        var(--primary-color) 30%,
+        var(--primary-color-light) 100%
+    );
+    /* 标题-纯色 */
+    /* --vp-home-hero-name-background: red; */
+
+    /* 首页-图片背景 */
+    /* 设置线性渐变 */
+    --vp-home-hero-image-background-image: linear-gradient(
+        -60deg,
+        var(--primary-color) 10%,
+        var(--primary-color-light) 100%
+    );
+    --vp-home-hero-image-filter: blur(150px);
+}
