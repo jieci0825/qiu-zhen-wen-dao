@@ -36,4 +36,10 @@
         var(--primary-color-light) 100%
     );
     --vp-home-hero-image-filter: blur(150px);
+
+    --mask-bg: rgba(101, 108, 133, 0.8);
+}
+
+html.dark {
+    --mask-bg: rgba(101, 108, 133, 0.8);
 }
