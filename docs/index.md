@@ -6,6 +6,9 @@ hero:
   name: "求真问道"
   text: "路漫漫其修远兮，吾将上下而求索。"
   tagline: 道阻且长，行则将至
+  image:
+    src: /logo.svg
+    alt: logo
   actions:
     - theme: brand
       text: 快速开始
@@ -13,6 +16,7 @@ hero:
     - theme: alt
       text: 使用技巧
       link: /作者/其他/VitePress 使用技巧
+
 
 features:
   - title: 劫辞の博客

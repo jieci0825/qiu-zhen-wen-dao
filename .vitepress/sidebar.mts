@@ -15,7 +15,7 @@ export const procressSidebar = () => {
     // 指南排序
     const guideSort = ['简介', '其他']
     // 技术分享排序
-    const techSort = ['前端基础', '浏览器', '手写代码', '前端工程化', 'Vue', 'Node.js', 'TypeScript', '其他']
+    const techSort = ['阅读须知', '前端基础', '浏览器']
     const sortMap = {
         '/指南': guideSort,
         '/技术分享': techSort
