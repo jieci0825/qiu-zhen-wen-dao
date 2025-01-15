@@ -11,8 +11,9 @@
     .main {
         font-family: '阿里妈妈数黑体 Bold';
     }
-}
-
-.VPImage {
-    width: 50%;
+    .image {
+        .VPImage {
+            width: 50%;
+        }
+    }
 }

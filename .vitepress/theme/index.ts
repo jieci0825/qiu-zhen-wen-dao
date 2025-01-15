@@ -1,4 +1,7 @@
-import DefaultTheme from 'vitepress/theme'
+import JcLayout from './Layout/index.vue'
 import './styles/index.scss'
 
-export default DefaultTheme
+export default {
+    Layout: JcLayout,
+    enhanceApp({ app, router }) {}
+}
