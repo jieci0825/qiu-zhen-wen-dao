@@ -1,5 +1,5 @@
 import JcLayout from './Layout/index.vue'
-import Confetti from './components/confetti.ts'
+
 import MediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
@@ -7,9 +7,7 @@ import './styles/index.scss'
 
 export default {
     Layout: JcLayout,
-    enhanceApp({ app, router }) {
-        app.component('Confetti', Confetti)
-    },
+    enhanceApp({ app, router }) {},
     setup() {
         const route = useRoute()
         const initZoom = () => {

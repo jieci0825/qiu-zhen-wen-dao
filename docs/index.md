@@ -33,4 +33,8 @@ features:
     link: https://github.com/jieci0825/mini-vue
 ---
 
+<script setup>
+import Confetti from '../.vitepress/theme/components/confetti'
+</script>
+
 <Confetti/>
