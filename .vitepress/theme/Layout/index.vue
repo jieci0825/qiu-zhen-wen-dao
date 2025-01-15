@@ -84,5 +84,6 @@ td {
     display: block;
     margin: 20px auto;
     max-height: 420px;
+    border-radius: 6px;
 }
 </style>

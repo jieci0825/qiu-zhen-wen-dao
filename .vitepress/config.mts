@@ -4,7 +4,7 @@ import { procressSidebar } from './sidebar.mts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: 'CoderJc',
+    title: '求真问道',
     description: '一个记录我个人学习理解的地方',
     srcDir: 'docs',
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
@@ -66,6 +66,7 @@ export default defineConfig({
             alt: 'CoderJc'
         },
         // siteTitle:false // 隐藏网站标题
+        siteTitle: 'coderjc',
 
         // 移动端菜单名称显示
         sidebarMenuLabel: '菜单',

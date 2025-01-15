@@ -3,6 +3,7 @@
         span {
             color: var(--primary-color);
             font-size: 1.3em;
+            font-family: '阿里妈妈数黑体 Bold';
         }
     }
 }
@@ -24,4 +25,8 @@
 
 .medium-zoom-image {
     z-index: 9999 !important;
+}
+
+body {
+    font-family: 'FiraCode-Regular';
 }

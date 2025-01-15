@@ -5,3 +5,13 @@
         url('//at.alicdn.com/wf/webfont/QdJkIkEeNscy/vQCXobjhiLmw.woff') format('woff');
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'FiraCode-Regular';
+    src: local('FiraCode-Regular'),
+        url('https://coderjc-1312270807.cos.ap-guangzhou.myqcloud.com/my-resource/font/FiraCode/FiraCode-Regular.woff2')
+            format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}

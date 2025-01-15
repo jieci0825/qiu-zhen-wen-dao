@@ -3,13 +3,7 @@ import { genSidebar, genSn } from './utils.mts'
 export const procressSidebar = () => {
     const sideBarConfig = {
         '/指南': genSidebar('指南'),
-        '/技术分享': genSidebar('技术分享'),
-        '/作者': [
-            {
-                text: '作者',
-                link: '/作者'
-            }
-        ]
+        '/技术分享': genSidebar('技术分享')
     }
 
     // 指南排序
