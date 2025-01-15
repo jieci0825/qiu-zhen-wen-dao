@@ -1,3 +1,3 @@
 git add .
-git commit -m "chore: update"
+git commit -m "feat: 发布文章"
 git push
