@@ -2,12 +2,12 @@
   "hash": "857aa805",
   "configHash": "c29c1f43",
   "lockfileHash": "001182c6",
-  "browserHash": "05aad84b",
+  "browserHash": "520bf8d2",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/.pnpm/vue@3.5.13/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "2e516bc1",
+      "fileHash": "b30f35be",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
@@ -19,13 +19,13 @@
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/.pnpm/@vueuse+core@11.3.0_vue@3.5.13/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "fb23702f",
+      "fileHash": "5ba7078b",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/.pnpm/@vueuse+integrations@11.3.0_focus-trap@7.6.4_vue@3.5.13/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "ab551ae4",
+      "fileHash": "f7fbb168",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
@@ -46,16 +46,16 @@
       "fileHash": "b0dc433a",
       "needsInterop": false
     },
-    "@giscus/vue": {
-      "src": "../../../node_modules/.pnpm/@giscus+vue@3.1.1_vue@3.5.13/node_modules/@giscus/vue/dist/index.js",
-      "file": "@giscus_vue.js",
-      "fileHash": "1d5de9aa",
-      "needsInterop": false
-    },
     "@vitepress-code-preview/container": {
       "src": "../../../node_modules/.pnpm/@vitepress-code-preview+container@1.0.8_vue@3.5.13/node_modules/@vitepress-code-preview/container/dist/index.js",
       "file": "@vitepress-code-preview_container.js",
-      "fileHash": "0c96656b",
+      "fileHash": "dfaf6985",
+      "needsInterop": false
+    },
+    "@giscus/vue": {
+      "src": "../../../node_modules/.pnpm/@giscus+vue@3.1.1_vue@3.5.13/node_modules/@giscus/vue/dist/index.js",
+      "file": "@giscus_vue.js",
+      "fileHash": "518e5bc9",
       "needsInterop": false
     }
   },

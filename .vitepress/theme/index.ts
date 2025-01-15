@@ -4,13 +4,14 @@ import MediumZoom from 'medium-zoom'
 import DemoPreview, { useComponents } from '@vitepress-code-preview/container'
 import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
+import type { App } from 'vue'
 import type { Theme } from 'vitepress'
 import './styles/index.scss'
 import '@vitepress-code-preview/container/dist/style.css'
 
 export default {
     Layout: JcLayout,
-    enhanceApp({ app, router }) {
+    enhanceApp({ app }: { app: App }) {
         useComponents(app, DemoPreview)
     },
     setup() {

@@ -41,9 +41,30 @@ export function complementZero(num: number) {
     return num.toString().padStart(2, '0')
 }
 
-export function genSidebar(dir: string) {
+export function genSidebar(
+    dir: string,
+    options?: {
+        excludes?: string[]
+    }
+) {
+    const params = Object.assign(
+        {},
+        {
+            excludes: ['demo-components', 'comps']
+        },
+        options || {}
+    )
+
+    // 过滤掉不需要的文件
+    function filterFiles(files: string[]) {
+        return files.filter(file => {
+            return !params.excludes.includes(file)
+        })
+    }
+
     const dirPath = path.resolve(DOCS_ROOT_PATH, dir)
-    const files = fs.readdirSync(dirPath)
+    const files = filterFiles(fs.readdirSync(dirPath))
+
     const getList = (files: string[], dirPath: string) => {
         return files.map(file => {
             const filePath = path.resolve(dirPath, file)
@@ -54,7 +75,7 @@ export function genSidebar(dir: string) {
             }
             if (stat.isDirectory()) {
                 // 如果是目录则递归调用
-                item.items = getList(fs.readdirSync(filePath), filePath)
+                item.items = getList(filterFiles(fs.readdirSync(filePath)), filePath)
             } else {
                 // 如果是文件则设置link
                 item.link = formatPath(dirPath.replace(DOCS_ROOT_PATH, '') + `/${formatFileText}`)

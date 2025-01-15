@@ -94,7 +94,7 @@ export default defineConfig({
             detailsLabel: '详情信息'
         },
         config(md) {
-            const docRoot = fileURLToPath(new URL('../', import.meta.url))
+            const docRoot = fileURLToPath(new URL('../docs', import.meta.url))
             md.use(demoPreviewPlugin, { docRoot })
         }
     },

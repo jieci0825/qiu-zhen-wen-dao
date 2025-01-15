@@ -1,3 +1,5 @@
+declare module '@vitepress-code-preview/container'
+
 interface ImportMetaEnv {
     readonly BASE_URL: string
     readonly DEV: boolean
