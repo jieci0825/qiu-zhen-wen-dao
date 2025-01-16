@@ -65,26 +65,38 @@ export function genSidebar(
     const dirPath = path.resolve(DOCS_ROOT_PATH, dir)
     const files = filterFiles(fs.readdirSync(dirPath))
 
-    const getList = (files: string[], dirPath: string) => {
-        return files.map(file => {
-            const filePath = path.resolve(dirPath, file)
-            const stat = fs.statSync(filePath)
-            const formatFileText = file.replace('.md', '')
-            const item: Item = {
-                text: formatFileText
-            }
-            if (stat.isDirectory()) {
-                // 如果是目录则递归调用
-                item.items = getList(filterFiles(fs.readdirSync(filePath)), filePath)
-            } else {
-                // 如果是文件则设置link
-                item.link = formatPath(dirPath.replace(DOCS_ROOT_PATH, '') + `/${formatFileText}`)
-            }
-            return item
-        })
+    interface ListItem {
+        text: string
+        link?: string
+        items?: Array<ListItem | null>
+    }
+
+    const getList = (files: string[], dirPath: string): Array<ListItem | null> => {
+        return files
+            .map(file => {
+                const filePath = path.resolve(dirPath, file)
+                const stat = fs.statSync(filePath)
+                const formatFileText = file.replace('.md', '')
+                const item: ListItem = {
+                    text: formatFileText
+                }
+                if (stat.isDirectory()) {
+                    // 如果是目录则递归调用
+                    item.items = getList(filterFiles(fs.readdirSync(filePath)), filePath)
+                } else {
+                    // 检查后缀，如果不是 .md则跳过
+                    if (!file.endsWith('.md')) {
+                        return null
+                    }
+                    // 如果是文件则设置link
+                    item.link = formatPath(dirPath.replace(DOCS_ROOT_PATH, '') + `/${formatFileText}`)
+                }
+                return item
+            })
+            .filter(Boolean)
     }
     const list = getList(files, dirPath)
-    return list
+    return list as Array<Item>
 }
 
 // 格式化话路径，将 \ 替换为 /
