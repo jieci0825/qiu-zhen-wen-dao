@@ -2,20 +2,21 @@ import { genSidebar, genSn } from './utils.mts'
 
 export const procressSidebar = () => {
     const sideBarConfig = {
-        '/指南': genSidebar('指南'),
+        '/指南': [
+            { text: '前言', link: '/指南/前言' },
+            { text: 'VitePress 使用技巧', link: '/指南/VitePress 使用技巧' }
+        ],
         '/技术分享': genSidebar('技术分享')
     }
 
-    // 指南排序
-    const guideSort = ['简介', '其他']
     // 技术分享排序
     const techSort = ['阅读须知', '前端基础', '浏览器']
     const sortMap = {
-        '/指南': guideSort,
         '/技术分享': techSort
     }
 
-    for (const key in sideBarConfig) {
+    const keys = ['/技术分享']
+    for (const key of keys) {
         sideBarConfig[key] = genSn(sideBarConfig[key])
         sortSidebar(sideBarConfig[key], sortMap[key])
     }

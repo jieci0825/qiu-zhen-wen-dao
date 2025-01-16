@@ -10,7 +10,7 @@
 <style lang="scss">
 .example-test-container {
     button {
-        padding: 8px 16px;
+        padding: 4px 8px;
         border-radius: 4px;
         border: 1px solid #ccc;
         background-color: salmon;

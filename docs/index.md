@@ -11,11 +11,14 @@ hero:
     alt: logo
   actions:
     - theme: brand
-      text: 快速开始
-      link: /指南/简介/前言
+      text: 开始阅读
+      link: /指南/前言
     - theme: alt
       text: 使用技巧
-      link: /作者/其他/VitePress 使用技巧
+      link: /指南/VitePress 使用技巧
+    - theme: alt
+      text: 在Github上查看
+      link: https://github.com/jieci0825/qiu-zhen-wen-dao
 
 
 features:

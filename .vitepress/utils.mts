@@ -58,7 +58,10 @@ export function genSidebar(
     // 过滤掉不需要的文件
     function filterFiles(files: string[]) {
         return files.filter(file => {
-            return !params.excludes.includes(file)
+            const flag1 = !params.excludes.includes(file)
+            // 同时还要排除文件中包含 assets 字符的(typora存储的本地图片会被放在 assets | xxx.assets 目录下)
+            const flag2 = !file.includes('assets')
+            return flag1 && flag2
         })
     }
 
