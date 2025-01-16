@@ -19,7 +19,7 @@ export default {
         const route = useRoute()
         const initZoom = () => {
             nextTick(() => {
-                MediumZoom('.main img', {
+                MediumZoom('.content-container img', {
                     background: 'var(--mask-bg)'
                 })
             })
