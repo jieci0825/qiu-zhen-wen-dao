@@ -28,5 +28,9 @@
 }
 
 body {
-    font-family: 'FiraCode-Regular';
+    .main {
+        pre {
+            font-family: 'FiraCode-Regular';
+        }
+    }
 }
