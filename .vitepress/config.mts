@@ -5,6 +5,7 @@ import { procressSidebar } from './sidebar.mts'
 import { viteDemoPreviewPlugin } from '@vitepress-code-preview/plugin'
 import { fileURLToPath, URL } from 'node:url'
 import { demoPreviewPlugin } from '@vitepress-code-preview/plugin'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -96,9 +97,11 @@ export default defineConfig({
         config(md) {
             const docRoot = fileURLToPath(new URL('../docs', import.meta.url))
             md.use(demoPreviewPlugin, { docRoot })
+
+            md.use(groupIconMdPlugin)
         }
     },
     vite: {
-        plugins: [viteDemoPreviewPlugin(), vueJsx()]
+        plugins: [viteDemoPreviewPlugin(), vueJsx(), groupIconVitePlugin()]
     }
 })

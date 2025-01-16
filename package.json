@@ -3,7 +3,8 @@
         "@types/node": "^22.10.6",
         "sass": "^1.83.4",
         "sass-embedded": "^1.83.4",
-        "vitepress": "^1.5.0"
+        "vitepress": "^1.5.0",
+        "vitepress-plugin-group-icons": "^1.3.4"
     },
     "scripts": {
         "dev": "vitepress dev",

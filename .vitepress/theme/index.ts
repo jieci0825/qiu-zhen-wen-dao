@@ -8,6 +8,7 @@ import type { App } from 'vue'
 import type { Theme } from 'vitepress'
 import './styles/index.scss'
 import '@vitepress-code-preview/container/dist/style.css'
+import 'virtual:group-icons.css'
 
 export default {
     Layout: JcLayout,
