@@ -1,6 +1,5 @@
 <script setup>
 import { data as posts } from '../../article.data.ts'
-
 const origin = window.location.origin
 </script>
 
@@ -12,8 +11,8 @@ const origin = window.location.origin
             :key="idx"
         >
             <a
-                :href="`${origin}${item.url}`"
                 target="_blank"
+                :href="`${origin}${item.url}`"
                 >{{ item.frontmatter.title }}</a
             >
         </div>
