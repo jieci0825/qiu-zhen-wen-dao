@@ -103,5 +103,10 @@ export default defineConfig({
     },
     vite: {
         plugins: [viteDemoPreviewPlugin(), vueJsx(), groupIconVitePlugin()]
+        // resolve: {
+        //     alias: {
+        //         '@': fileURLToPath(new URL('./', import.meta.url))
+        //     }
+        // }
     }
 })
