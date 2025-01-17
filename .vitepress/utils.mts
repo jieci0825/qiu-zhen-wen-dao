@@ -68,8 +68,16 @@ export function genSidebar(
     const dirPath = path.resolve(DOCS_ROOT_PATH, dir)
     const files = filterFiles(fs.readdirSync(dirPath))
 
+    interface BaseItem {
+        text: string
+        collapsed?: boolean
+        link?: string
+        items?: Array<BaseItem>
+    }
+
     interface ListItem {
         text: string
+        collapsed?: boolean
         link?: string
         items?: Array<ListItem | null>
     }
@@ -84,6 +92,8 @@ export function genSidebar(
                     text: formatFileText
                 }
                 if (stat.isDirectory()) {
+                    // 如果是目录则设置collapsed-默认都是折叠的
+                    item.collapsed = true
                     // 如果是目录则递归调用
                     item.items = getList(filterFiles(fs.readdirSync(filePath)), filePath)
                 } else {
@@ -99,7 +109,7 @@ export function genSidebar(
             .filter(Boolean)
     }
     const list = getList(files, dirPath)
-    return list as Array<Item>
+    return list as Array<BaseItem>
 }
 
 // 格式化话路径，将 \ 替换为 /
