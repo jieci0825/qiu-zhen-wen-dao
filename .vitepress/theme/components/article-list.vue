@@ -13,7 +13,6 @@ const origin = window.location.origin
             <a
                 :href="`${origin}${item.url}`"
                 target="_blank"
-                rel="noopener noreferrer"
                 >{{ item.frontmatter.title }}</a
             >
         </div>
