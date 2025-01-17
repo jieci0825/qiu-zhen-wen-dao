@@ -1,5 +1,6 @@
 <script setup>
 import { data as posts } from '../../article.data.ts'
+
 const origin = window.location.origin
 </script>
 

@@ -70,6 +70,7 @@ export function genSidebar(
 
     interface BaseItem {
         text: string
+        collapsible?: boolean
         collapsed?: boolean
         link?: string
         items?: Array<BaseItem>
@@ -77,6 +78,7 @@ export function genSidebar(
 
     interface ListItem {
         text: string
+        collapsible?: boolean
         collapsed?: boolean
         link?: string
         items?: Array<ListItem | null>
@@ -92,6 +94,7 @@ export function genSidebar(
                     text: formatFileText
                 }
                 if (stat.isDirectory()) {
+                    item.collapsible = true
                     // 如果是目录则设置collapsed-默认都是折叠的
                     item.collapsed = true
                     // 如果是目录则递归调用
