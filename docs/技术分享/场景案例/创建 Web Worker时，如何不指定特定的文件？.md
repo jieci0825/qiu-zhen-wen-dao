@@ -1,8 +1,8 @@
 ---
-title: 创建Web Worker时，如何不指定特定的文件？
+title: 创建 Web Worker时，如何不指定特定的文件？
 ---
 
-# 创建Web Worker时，如何不指定特定的文件？
+# 创建 Web Worker时，如何不指定特定的文件？
 
 ## 使用 Object URL
 ```js
