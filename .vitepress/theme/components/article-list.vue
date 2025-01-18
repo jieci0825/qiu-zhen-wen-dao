@@ -5,10 +5,8 @@ const origin = window.location.origin
 
 const list = ref(posts)
 const keyword = ref('')
-// frontmatter
 
 function formatData() {
-    console.log(111)
     list.value = []
     for (const item of posts) {
         if (item.frontmatter.title && item.frontmatter.title.includes(keyword.value)) {
