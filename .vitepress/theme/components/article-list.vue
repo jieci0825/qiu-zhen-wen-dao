@@ -59,9 +59,9 @@ const debounceFn = debounce(formatData, 300)
     margin-top: 20px;
     input {
         width: 100%;
-        padding: 10px;
+        padding: 8px;
         border: 2px solid #ccc;
-        border-radius: 8px;
+        border-radius: 6px;
         font-size: 16px;
         transition: all 0.3s ease-in-out;
         &::placeholder {
