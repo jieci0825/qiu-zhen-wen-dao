@@ -22,7 +22,6 @@ function debounce(fn, delay) {
             clearTimeout(timer)
         }
         timer = setTimeout(() => {
-            console.log('debounce')
             fn()
         }, delay)
     }
