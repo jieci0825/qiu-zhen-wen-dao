@@ -1,8 +1,8 @@
 ---
-title: JS比较大小
+title: JS 比较大小
 ---
 
-# JS比较大小
+# JS 比较大小
 
 ```js
 console.log([1 < 2 < 3, 3 < 2 < 1])
