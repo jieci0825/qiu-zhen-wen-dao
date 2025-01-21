@@ -81,6 +81,7 @@ export default defineConfig({
         darkModeSwitchTitle: '深色模式'
     },
     markdown: {
+        theme: { light: 'one-light', dark: 'andromeeda' },
         // 代码块行号
         lineNumbers: true,
         image: {
