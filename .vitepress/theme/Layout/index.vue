@@ -3,31 +3,16 @@ import Giscus from '@giscus/vue'
 import NotFount from '../components/not-found.vue'
 import DefaultTheme from 'vitepress/theme'
 import { useData, inBrowser } from 'vitepress'
-import { watch } from 'vue'
+import { useGiscus } from './hooks/useGiscus'
+import { useTheme } from './hooks/useTheme'
 const { Layout } = DefaultTheme
 
 defineOptions({ name: 'JcLayout' })
 
 const { isDark } = useData()
 
-watch(isDark, value => {
-    // 如果不是浏览器则不做处理
-    if (!inBrowser) return
-
-    const iframe = document.querySelector('giscus-widget')?.shadowRoot?.querySelector('iframe')
-    if (iframe) {
-        iframe.contentWindow?.postMessage(
-            {
-                giscus: {
-                    setConfig: {
-                        theme: value ? 'dark' : 'light'
-                    }
-                }
-            },
-            'https://giscus.app'
-        )
-    }
-})
+useGiscus(isDark, inBrowser)
+useTheme(isDark)
 </script>
 
 <template>
@@ -85,5 +70,30 @@ td {
     margin: 20px auto;
     max-height: 420px;
     border-radius: 6px;
+}
+
+// 深浅主题切换
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root),
+.dark::view-transition-new(root) {
+    z-index: 1;
+}
+
+::view-transition-new(root),
+.dark::view-transition-old(root) {
+    z-index: 9999;
+}
+
+.VPSwitchAppearance {
+    width: 22px !important;
+}
+
+.VPSwitchAppearance .check {
+    transform: none !important;
 }
 </style>
