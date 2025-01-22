@@ -31,7 +31,9 @@ body {
     .main {
         pre {
             font-family: 'FiraCode-Regular';
-            font-size: 1.1em;
+        }
+        .line-numbers-wrapper {
+            font-family: 'FiraCode-Regular';
         }
     }
 }
