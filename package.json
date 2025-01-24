@@ -12,7 +12,7 @@
         "dev": "vitepress dev",
         "build": "vitepress build",
         "preview": "vitepress preview",
-        "commit": "./commit.sh"
+        "commit": "bash ./commit.sh"
     },
     "dependencies": {
         "@giscus/vue": "^3.1.1",
