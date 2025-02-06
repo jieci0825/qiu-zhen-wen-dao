@@ -148,3 +148,13 @@ const config: UserConfig = {
 export default config
 ```
 :::
+
+
+
+## 组件预览
+```
+:::demo src=comps/example-test.vue
+:::
+```
+:::demo src=comps/example-test.vue
+:::

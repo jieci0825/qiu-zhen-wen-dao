@@ -2,9 +2,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vitepress'
 import { nav } from './nav.mts'
 import { procressSidebar } from './sidebar.mts'
-import { viteDemoPreviewPlugin } from '@vitepress-code-preview/plugin'
+import { viteDemoPreviewPlugin, demoPreviewPlugin } from '@vitepress-code-preview/plugin'
 import { fileURLToPath, URL } from 'node:url'
-import { demoPreviewPlugin } from '@vitepress-code-preview/plugin'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
