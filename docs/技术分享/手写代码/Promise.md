@@ -4,7 +4,8 @@ title: Promise
 
 # Promise
 
-> 本文不会涉及非常想写的赘述，步骤根据效果划分实现。
+> 本文不会涉及详细的赘述，仅根据具体效果划分步骤。
+> 如果想看更加详细的解析，可以查看我的另一篇文章 [Promise使用详解及手写](https://blog.csdn.net/qq_53109172/article/details/130781768)
 
 ## Promise 主体
 
@@ -116,7 +117,7 @@ p.then(
     }
 )
 ```
-此时，就可以根据状态来执行不同的状态函数，但是失败的状态除了 reject 方法来确定之外，如果执行的过程发生错误，也需要设置为失败的状态，如下：
+此时，就可以根据状态来执行不同的状态函数，但是失败的状态除了 reject 方法来确定之外，执行的过程如果发生错误，也需要设置为失败的状态，如下：
 ```js
 class MyPromise {
     #status = PENDING
@@ -139,7 +140,7 @@ class MyPromise {
 
 ### then - 解决异步设置状态
 而此时是存在一个问题，目前所有的状态确定都是处于同步状态的，如果是异步的，那么 then 方法会因为状态为 pending 而不执行相对应的状态函数，因此需要再状态改变时来执行，改造如下：
-```js
+```js{31-38,42-46}
 class MyPromise {
     #status = PENDING
     #result = undefined
@@ -151,7 +152,7 @@ class MyPromise {
             this.#result = result
 
             // 状态改变时，则调用 run 方法
-            this.#run()
+            this.#run() // [!code ++]
         }
 
         const resolve = res => {
@@ -180,7 +181,7 @@ class MyPromise {
     }
 
     then(resolveFn, rejectFn) {
-        // then 方法先赋值
+        // then 方法调用时，将要调用的状态函数存储起来，方便后续使用
         this.#handle = {
             resolve: resolveFn,
             reject: rejectFn
