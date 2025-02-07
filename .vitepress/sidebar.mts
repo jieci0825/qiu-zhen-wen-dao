@@ -10,7 +10,7 @@ export const procressSidebar = () => {
     }
 
     // 技术分享排序
-    const techSort = ['阅读', '三剑客', '浏览器', '场景案例', '逻辑推理']
+    const techSort = ['阅读', '三剑客', 'Vue', '浏览器', '场景案例', '逻辑推理']
     const sortMap = {
         '/技术分享': techSort
     }
