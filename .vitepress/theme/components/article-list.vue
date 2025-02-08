@@ -31,6 +31,9 @@ const debounceFn = debounce(formatData, 300)
 </script>
 
 <template>
+    <div class="header-wrapper">
+        <div>文章总数：{{ posts.length }}</div>
+    </div>
     <div class="search-wrapper">
         <input
             type="text"
@@ -55,6 +58,11 @@ const debounceFn = debounce(formatData, 300)
 </template>
 
 <style scoped lang="scss">
+.header-wrapper {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .search-wrapper {
     margin-top: 20px;
     input {
