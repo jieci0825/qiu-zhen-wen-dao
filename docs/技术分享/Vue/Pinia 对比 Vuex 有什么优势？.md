@@ -1,5 +1,5 @@
 ---
-title: Pinia对比Vuex的优势？
+title: Pinia 对比 Vuex 有什么优势？
 ---
 
 # Pinia对比Vuex的优势？

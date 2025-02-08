@@ -1,5 +1,5 @@
 ---
-title: DIFF 算法
+title: Diff 算法
 ---
 
 # Diff 算法
