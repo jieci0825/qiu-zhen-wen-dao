@@ -3,8 +3,8 @@ import Giscus from '@giscus/vue'
 import NotFount from '../components/not-found.vue'
 import DefaultTheme from 'vitepress/theme'
 import { useData, inBrowser } from 'vitepress'
-import { useGiscus } from './hooks/useGiscus'
-import { useTheme } from './hooks/useTheme'
+import { useGiscus } from './hooks/use-giscus'
+import { useTheme } from './hooks/use-theme'
 const { Layout } = DefaultTheme
 
 defineOptions({ name: 'JcLayout' })
