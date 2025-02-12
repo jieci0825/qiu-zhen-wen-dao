@@ -4,7 +4,7 @@ title: ES6 降级 ES5
 
 # ES6 降级 ES5
 
-** ES6 **：
+**ES6**：
 ```js
 class Example {
 	constructor(name) {
@@ -21,7 +21,9 @@ const e = new Example('Hello')
 e.init()
 ```
 
-** ES5 **：
+---
+
+**ES5**：
 ```js
 function Example(name) {
 	this.name = name
