@@ -47,4 +47,22 @@ body {
         border-radius: 4px;
         transition: all 0.3s ease;
     }
+
+    .line-numbers-wrapper {
+        padding-top: 15px;
+        font-size: 0.9em;
+    }
+
+    [class*='language-'] {
+        & > span.lang {
+            top: -2px;
+        }
+        pre {
+            padding: 15px 0;
+        }
+        code {
+            padding: 0 15px;
+            font-size: 0.9em;
+        }
+    }
 }
