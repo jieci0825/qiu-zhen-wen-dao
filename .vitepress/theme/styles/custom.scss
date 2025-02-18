@@ -37,3 +37,14 @@ body {
         }
     }
 }
+
+.vp-doc {
+    blockquote {
+        border-left: 4px solid var(--blockquote-left);
+        background-color: var(--blockquote-bg);
+        color: var(--blockquote-color);
+        padding: 0.5em 0.8em;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+}

@@ -41,8 +41,16 @@
 
     // code
     --vp-code-line-height: 1.4;
+
+    // blockquote
+    --blockquote-color: var(--primary-color);
+    --blockquote-left: var(--primary-color);
+    --blockquote-bg: #f2faf8;
 }
 
 html.dark {
     --mask-bg: rgba(101, 108, 133, 0.8);
+    // blockquote
+    --blockquote-color: var(--primary-color-light);
+    --blockquote-bg: var(--primary-color-dark-2);
 }
