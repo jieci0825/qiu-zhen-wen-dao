@@ -1,13 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import Virtual from './virtual.vue'
+import { computed, ref } from 'vue'
 import { data as posts } from '../../article.data.ts'
-import { console } from 'inspector'
 const origin = window.location.origin
 
 const list = ref(posts)
 const keyword = ref('')
+const total = posts.length - 2
 
-// console.log(list.value)
+const filteredList = computed(() => {
+    return list.value.filter(item => !!item.frontmatter.title)
+})
 
 function formatData() {
     list.value = []
@@ -35,7 +38,7 @@ const debounceFn = debounce(formatData, 300)
 
 <template>
     <div class="header-wrapper">
-        <div>文章总数：{{ posts.length }}</div>
+        <div>文章总数：{{ total }}</div>
     </div>
     <div class="search-wrapper">
         <input
@@ -46,16 +49,25 @@ const debounceFn = debounce(formatData, 300)
         />
     </div>
     <div class="article-list-wrapper">
-        <div
-            class="list-item"
-            v-for="(item, idx) in list"
-            :key="idx"
+        <Virtual
+            v-show="filteredList.length > 0"
+            :data="filteredList"
+            :remain="15"
         >
-            <a
-                target="_blank"
-                :href="`${origin}${item.url}`"
-                >{{ item.frontmatter.title }}</a
-            >
+            <template #default="{ node }">
+                <a
+                    target="_blank"
+                    :href="`${origin}${node.url}`"
+                    >{{ node.frontmatter.title }}</a
+                >
+            </template>
+        </Virtual>
+
+        <div
+            v-show="filteredList.length === 0"
+            class="empty"
+        >
+            暂无数据
         </div>
     </div>
 </template>
@@ -93,5 +105,12 @@ const debounceFn = debounce(formatData, 300)
     flex-direction: column;
     gap: 10px;
     padding: 15px 0;
+}
+
+.empty {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 </style>
