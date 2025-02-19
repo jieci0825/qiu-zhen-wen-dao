@@ -15,7 +15,7 @@ hero:
       link: /指南/前言
     - theme: alt
       text: 使用技巧
-      link: /指南/VitePress 使用技巧
+      link: /指南/语法记录
     - theme: alt
       text: 在Github上查看
       link: https://github.com/jieci0825/qiu-zhen-wen-dao

@@ -4,7 +4,7 @@ export const procressSidebar = () => {
     const sideBarConfig = {
         '/指南': [
             { text: '前言', link: '/指南/前言' },
-            { text: 'VitePress 使用技巧', link: '/指南/VitePress 使用技巧' }
+            { text: '语法记录', link: '/指南/语法记录' }
         ],
         '/技术分享': genSidebar('技术分享')
     }
