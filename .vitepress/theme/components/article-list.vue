@@ -9,7 +9,7 @@ const keyword = ref('')
 function formatData() {
     list.value = []
     for (const item of posts) {
-        if (item.frontmatter.title && item.frontmatter.title.includes(keyword.value)) {
+        if (item.frontmatter.title && item.frontmatter.title.toUpperCase().includes(keyword.value.toUpperCase())) {
             list.value.push(item)
         }
     }
