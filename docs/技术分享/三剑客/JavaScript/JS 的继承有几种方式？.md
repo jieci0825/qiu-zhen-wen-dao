@@ -9,10 +9,10 @@ title: JS 的继承有几种方式？
 
 ```js
 function Parent() {
-  this.name = 'Parent'
+    this.name = 'Parent'
 }
 Parent.prototype.sayHello = function () {
-  console.log('Hello from Parent')
+    console.log('Hello from Parent')
 }
 
 function Child() {}
@@ -35,11 +35,11 @@ child.sayHello() // "Hello from Parent"
 
 ```js
 function Parent(name) {
-  this.name = name
+    this.name = name
 }
 function Child(name, age) {
-  Parent.call(this, name) // 继承 Parent
-  this.age = age
+    Parent.call(this, name) // 继承 Parent
+    this.age = age
 }
 const child = new Child('Rain', 18)
 console.log(child.name, child.age) // "Rain", 18
@@ -56,15 +56,15 @@ console.log(child.name, child.age) // "Rain", 18
 
 ```js
 function Parent(name) {
-  this.name = name
+    this.name = name
 }
 Parent.prototype.sayHello = function () {
-  console.log('Hello from Parent')
+    console.log('Hello from Parent')
 }
 
 function Child(name, age) {
-  Parent.call(this, name) // 第 1 次调用 Parent
-  this.age = age
+    Parent.call(this, name) // 第 1 次调用 Parent
+    this.age = age
 }
 
 Child.prototype = new Parent() // 第 2 次调用 Parent
@@ -85,10 +85,10 @@ child.sayHello() // "Hello from Parent"
 
 ```js
 const parent = {
-  name: 'Parent',
-  sayHello() {
-    console.log('Hello!')
-  },
+    name: 'Parent',
+    sayHello() {
+        console.log('Hello!')
+    },
 }
 const child = Object.create(parent)
 child.age = 18
@@ -106,15 +106,15 @@ child.sayHello() // "Hello!"
 
 ```js
 function Parent(name) {
-  this.name = name
+    this.name = name
 }
 Parent.prototype.sayHello = function () {
-  console.log('Hello from Parent')
+    console.log('Hello from Parent')
 }
 
 function Child(name, age) {
-  Parent.call(this, name)
-  this.age = age
+    Parent.call(this, name)
+    this.age = age
 }
 Child.prototype = Object.create(Parent.prototype) // 关键优化
 Child.prototype.constructor = Child
@@ -135,19 +135,19 @@ child.sayHello() // "Hello from Parent"
 
 ```js
 class Parent {
-  constructor(name) {
-    this.name = name
-  }
-  sayHello() {
-    console.log('Hello from Parent')
-  }
+    constructor(name) {
+        this.name = name
+    }
+    sayHello() {
+        console.log('Hello from Parent')
+    }
 }
 
 class Child extends Parent {
-  constructor(name, age) {
-    super(name) // 继承属性
-    this.age = age
-  }
+    constructor(name, age) {
+        super(name) // 继承属性
+        this.age = age
+    }
 }
 
 const child = new Child('Rain', 18)
