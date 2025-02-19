@@ -6,7 +6,7 @@ const origin = window.location.origin
 
 const list = ref(posts)
 const keyword = ref('')
-const total = posts.length - 2
+const total = posts.filter(item => !!item.frontmatter.title).length
 
 const filteredList = computed(() => {
     return list.value.filter(item => !!item.frontmatter.title)
