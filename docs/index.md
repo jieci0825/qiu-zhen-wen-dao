@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "求真问道"
-  text: "路漫漫其修远兮，吾将上下而求索。"
+  text: "路漫漫其修远兮，吾将上下而求索"
   tagline: 道阻且长，行则将至
   image:
     src: /logo.svg
@@ -24,7 +24,7 @@ hero:
 features:
   - title: 劫辞の博客
     icon: 🐦‍🔥
-    details: 浩瀚星海中的一粒微尘，幽深林海中的一隅树洞，亦是时光洪流中的一瞬微光。
+    details: 浩瀚星海中的一粒微尘，幽深林海中的一隅树洞，时光洪流中的一瞬微光。
     link: https://blog.coderjc.cn
   - title: GitHub:my-demo
     icon: 🐋
