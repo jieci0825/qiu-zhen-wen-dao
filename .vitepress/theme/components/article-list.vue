@@ -39,6 +39,7 @@ const debounceFn = debounce(formatData, 300)
 <template>
     <div class="header-wrapper">
         <div>文章总数：{{ total }}</div>
+        <div>本次查询：{{ filteredList.length }}</div>
     </div>
     <div class="search-wrapper">
         <input
@@ -76,6 +77,9 @@ const debounceFn = debounce(formatData, 300)
 .header-wrapper {
     font-size: 20px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .search-wrapper {
