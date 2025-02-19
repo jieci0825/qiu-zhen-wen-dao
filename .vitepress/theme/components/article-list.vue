@@ -1,10 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 import { data as posts } from '../../article.data.ts'
+import { console } from 'inspector'
 const origin = window.location.origin
 
 const list = ref(posts)
 const keyword = ref('')
+
+// console.log(list.value)
 
 function formatData() {
     list.value = []
