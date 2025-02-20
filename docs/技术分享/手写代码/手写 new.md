@@ -1,10 +1,12 @@
 ---
-title: 手写 new[❌️]
+title: 手写 new
 ---
 
 # 手写 new
 
 new 是一个关键词，所以使用函数的方式来模拟。
+
+---
 
 ```js{9}
 function myNew(constructor, ...args) {

@@ -6,6 +6,8 @@ title: 手写 instanceof
 
 instanceof 是一个关键词，所以不能直接重写，只能通过函数的形式来模拟。
 
+---
+
 ```js
 // 检测构造函数的原型对象(prototype)是否出现在实例对象的原型链上
 function myInstanceof(obj, constructor) {
