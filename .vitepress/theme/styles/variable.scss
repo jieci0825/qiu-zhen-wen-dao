@@ -6,6 +6,7 @@
     --primary-color-light-7: #90ffe9;
     --primary-color-light-8: #c7fff4;
     --primary-color-light-9: #dcfcf5;
+    --primary-color-light-10: #f2faf8;
     --primary-color-dark: #0a655f;
     --primary-color-dark-1: #0d544f;
     --primary-color-dark-2: #003332;
@@ -45,7 +46,7 @@
     // blockquote
     --blockquote-color: var(--primary-color);
     --blockquote-left: var(--primary-color);
-    --blockquote-bg: #f2faf8;
+    --blockquote-bg: var(--primary-color-light-10);
 
     --vp-code-line-height: 1.6;
 }

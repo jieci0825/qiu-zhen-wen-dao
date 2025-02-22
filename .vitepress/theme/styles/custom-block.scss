@@ -1,0 +1,10 @@
+.custom-block {
+    &.tip {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        background-color: var(--blockquote-bg);
+        code {
+            background-color: rgba($color: #009688, $alpha: 0.2);
+        }
+    }
+}
