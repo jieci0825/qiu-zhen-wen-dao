@@ -1,4 +1,5 @@
 import JcLayout from './Layout/index.vue'
+import JcTooltip from './components/tooltip.vue'
 
 import MediumZoom from 'medium-zoom'
 import DemoPreview, { useComponents } from '@vitepress-code-preview/container'
@@ -26,6 +27,7 @@ export default {
         useComponents(ctx.app, DemoPreview)
         vitepressNprogress(ctx)
         registerGlobalComponents(ctx.app)
+        ctx.app.component('JcTooltip', JcTooltip)
     },
     setup() {
         const route = useRoute()
