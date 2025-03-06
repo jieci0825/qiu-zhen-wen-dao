@@ -11,13 +11,14 @@ CommonJs 模块输出的是值的拷贝，也就是说，一旦输出一个值�
 var count = 1;
 
 var printCount = () =>{ 
-return ++count;
+    return ++count;
 }
 
 module.exports = {
-printCount: printCount,
-count: count
+    printCount: printCount,
+    count: count
 };
+
 // index.js
 let v = require('./common');
 console.log(v.count); // 1
@@ -62,7 +63,7 @@ ES6 输入的模块变量，只是一个“符号连接符”，所以这个变�
 ```js
 let count = 1;
 function printCount() {
-++count;
+    ++count;
 } 
 export default { count, printCount}
 // main3.js
