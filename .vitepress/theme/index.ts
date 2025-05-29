@@ -1,10 +1,10 @@
 import JcLayout from './Layout/index.vue'
 import JcTooltip from './components/tooltip.vue'
+import JcTag from './components/jc-tag.vue'
 
 import MediumZoom from 'medium-zoom'
 import DemoPreview, { useComponents } from '@vitepress-code-preview/container'
 import vitepressNprogress from 'vitepress-plugin-nprogress'
-import JcTag from './components/jc-tag.vue'
 import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
 import type { Theme } from 'vitepress'
