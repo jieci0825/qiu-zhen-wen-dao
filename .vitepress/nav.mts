@@ -6,11 +6,11 @@ export const nav = [
         link: '/技术分享/阅读/文章归档'
     },
     {
-        text: '阅读有感',
+        text: '笔记',
         items: [
             {
                 text: '《你不知道的 JavaScript-上》',
-                link: '/《你不知道的 JavaScript-上》/第一章：作用域是什么/01_编译原理.md'
+                link: '/笔记/《你不知道的 JavaScript-上》/第一章：作用域是什么/01_编译原理.md'
             }
         ]
     },

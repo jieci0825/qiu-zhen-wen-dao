@@ -7,7 +7,7 @@ export const procressSidebar = () => {
             { text: '语法记录', link: '/指南/语法记录' }
         ],
         '/技术分享': genSidebar('技术分享'),
-        '/《你不知道的 JavaScript-上》': genSidebar('《你不知道的 JavaScript-上》')
+        '/笔记/《你不知道的 JavaScript-上》': genSidebar('笔记/《你不知道的 JavaScript-上》')
     }
 
     // 技术分享排序
